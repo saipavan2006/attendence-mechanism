@@ -1,0 +1,50 @@
+{
+  "project_name": "AI Face Recognition Attendance System",
+  "role": "Attendance & Database Engineer",
+  "branch": "attendance",
+  "project_overview": {
+    "goal": "Build an automated attendance system using face recognition.",
+    "current_status": "Face detection works. Recognition branch will provide student_id and confidence. Main branch handles integration."
+  },
+  "your_primary_responsibility": "Design and implement attendance decision logic and database storage.",
+  "you_must_build": [
+    "SQLite database schema",
+    "Students table",
+    "Attendance table",
+    "Daily attendance restriction (one entry per student per day)",
+    "Confidence threshold validation",
+    "Cooldown logic to prevent duplicate marking"
+  ],
+  "expected_input_from_recognition": {
+    "student_id": "string",
+    "confidence": "float"
+  },
+  "folders_you_can_modify": [
+    "attendance/",
+    "database/"
+  ],
+  "folders_you_must_not_modify": [
+    "recognition/",
+    "main.py",
+    "detection/"
+  ],
+  "database_structure": {
+    "students_table": {
+      "student_id": "TEXT PRIMARY KEY",
+      "name": "TEXT"
+    },
+    "attendance_table": {
+      "student_id": "TEXT",
+      "date": "TEXT",
+      "time": "TEXT",
+      "confidence": "REAL"
+    }
+  },
+  "workflow_rules": [
+    "Work only on attendance branch",
+    "Do not merge into main yourself",
+    "Commit frequently with clear messages",
+    "Push only to attendance branch"
+  ],
+  "core_question_you_answer": "Should this student be marked present?"
+}

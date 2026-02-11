@@ -1,0 +1,43 @@
+{
+  "project_name": "AI Face Recognition Attendance System",
+  "role": "Recognition Engineer",
+  "branch": "recognition",
+  "project_overview": {
+    "goal": "Build an automated attendance system using face detection and recognition.",
+    "current_status": "Camera and face detection are implemented and working. Branch structure is created. Main branch handles integration."
+  },
+  "your_primary_responsibility": "Implement the face recognition (identity detection) system.",
+  "you_must_build": [
+    "Face embedding generation system",
+    "Embedding storage per student",
+    "Face matching using cosine similarity",
+    "Confidence threshold logic",
+    "Return student_id and confidence to main"
+  ],
+  "expected_output_format": {
+    "student_id": "string",
+    "confidence": "float (0 to 1)"
+  },
+  "folders_you_can_modify": [
+    "recognition/"
+  ],
+  "folders_you_must_not_modify": [
+    "attendance/",
+    "database/",
+    "main.py",
+    "detection/"
+  ],
+  "technical_requirements": {
+    "recommended_model": "InsightFace or FaceNet",
+    "embedding_storage": "data/embeddings/<student_id>.npy",
+    "matching_method": "Cosine similarity",
+    "threshold_tuning_required": true
+  },
+  "workflow_rules": [
+    "Work only on recognition branch",
+    "Do not merge into main yourself",
+    "Commit frequently with clear messages",
+    "Push only to recognition branch"
+  ],
+  "core_question_you_answer": "WHO is this person?"
+}
